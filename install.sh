@@ -214,8 +214,8 @@ _link_mirza() {
 function self_update_script() {
     local MASTER_PATH="/root/install.sh"
     local BIN_LINK="/usr/local/bin/bot"
-    local URL="https://raw.githubusercontent.com/bademjonvpn/bot/main/install.sh"
-    local TEMP_FILE="/tmp/bademjonvpn_update.sh"
+    local URL="https://raw.githubusercontent.com/alirezaahabibii/n/main/install.sh"
+    local TEMP_FILE="/tmp/alirezaahabibii_update.sh"
 
     # Make sure DNS works before reaching GitHub
     ensure_dns >/dev/null 2>&1
