@@ -1241,13 +1241,10 @@ f,n.n2',
                         'ok_success_user_10' => '✅ کاربر با موفقیت از لیست حذف گردید.',
                         'err_notfound_user_6' => '❌ کاربری در لیست وجود ندارد',
                         'btn_27' => 'لیست افراد👇',
-                        'msg_panel_admin_bot_report' => '💎 | Version Bot: %s
-📌 | Version Mini App: 0.1.1
+                        'msg_panel_admin_bot_report' => ' Version Bot: %s
+ Version Mini App: 0.1.1
 
-<blockquote>🔹 | این ربات توسط @Tabkhaal ساخته شده و فروش این ربات پیگرد قانونی دارد </blockquote>
-
-
-<blockquote>🔹 | در صورت مشاهدهٔ فروش یا دریافت وجه، لطفاً وجه خود را پیگیری کرده و بازپس‌گیری نمایید.</blockquote>
+<blockquote>🔹 https://t.me/tabkhaal |  </blockquote>
 
 <blockquote>🐞 | اگر در عملکرد ربات با باگ یا مشکلی مواجه شدید، از طریق دکمهٔ **📬 گزارش ربات** در پنل ادمین با ما در ارتباط باشید.</blockquote>',
                         'ok_payment_gateway_name' => '
