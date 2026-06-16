@@ -281,8 +281,8 @@ self_update_script "$@"
 BOT_DIR_DEFAULT="/var/www/html/aliconfig"
 CONFIG_FILE_DEFAULT="$BOT_DIR_DEFAULT/config.php"
 GIT_REPO="alirezaahabibii/n"
-LATEST_CACHE="/tmp/.mirza_latest_version"
-IP_CACHE="/tmp/.mirza_server_ip"
+LATEST_CACHE="/tmp/.ali_latest_version"
+IP_CACHE="/tmp/.ali_server_ip"
 
 # ── Resumable-install state engine ───────────────────────────
 # Survives reboots / network drops. Lets a failed install resume
