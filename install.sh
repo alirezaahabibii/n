@@ -5,7 +5,7 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-INSTALL_LOG="/tmp/mirza_install.log"
+INSTALL_LOG="/tmp/ali_install.log"
 
 export DEBIAN_FRONTEND=noninteractive
 export NEEDRESTART_MODE=a
@@ -164,7 +164,7 @@ _drule()  { printf "  ${C_BORDER}%s${CR}\n" "$(_repeat "━" "$UI_W")"; }
 banner()  {
     echo
     _drule
-    printf "  ${C_OK}▌${CR} ${C_TITLE}MIRZA${CR}  ${C_DIM}— VPN Subscription Management${CR}\n"
+    printf "  ${C_OK}▌${CR} ${C_TITLE}Ali${CR}  ${C_DIM}— VPN Subscription Management${CR}\n"
     _drule
 }
 # Menu item row: [n] label  (left-aligned, no right border)
@@ -278,17 +278,17 @@ function self_update_script() {
 self_update_script "$@"
 
 # ── Repo / paths ─────────────────────────────────────────────
-BOT_DIR_DEFAULT="/var/www/html/mirzaprobotconfig"
+BOT_DIR_DEFAULT="/var/www/html/aliconfig"
 CONFIG_FILE_DEFAULT="$BOT_DIR_DEFAULT/config.php"
-GIT_REPO="mahdiMGF2/mirzabot"
+GIT_REPO="alirezaahabibii/n"
 LATEST_CACHE="/tmp/.mirza_latest_version"
 IP_CACHE="/tmp/.mirza_server_ip"
 
 # ── Resumable-install state engine ───────────────────────────
 # Survives reboots / network drops. Lets a failed install resume
 # from the last completed phase instead of starting from scratch.
-STATE_DIR="/root/confmirza"
-STATE_FILE="$STATE_DIR/.mirza_install_state"
+STATE_DIR="/root/confali"
+STATE_FILE="$STATE_DIR/.ali_install_state"
 
 state_init() {
     mkdir -p "$STATE_DIR" 2>/dev/null
