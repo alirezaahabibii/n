@@ -709,13 +709,13 @@ n2  = نماینده با قابلیت های بیشتر',
                         'ask_send_token' => '📌 توکن را ارسال نمایید',
                         'err_panel_manage_link_domain' => '❌ نکته :
 برای فعالسازی پنل باید به منوی مدیریت پنل  رفته و گزینه های 
-تنظیم شناسه اینباند و دامنه لینک ساب را حتما تنظیم نمایید در غیراینصورت کانفیگ ساخته نخواهد شد',
+تنظیم پروتکل اینباند و دامنه لینک ساب را حتما تنظیم نمایید در غیراینصورت کانفیگ ساخته نخواهد شد',
                         'err_panel_user_manage_bot' => '❌ نکته :
 برای فعالسازی پنل باید به منوی مدیریت پنل  رفته و گزینه های 
 تنظیم پروتکل و اینباند را تنظیم نمایید تا ربات کانفیگ دهد در غیراینصورت کانفیگ به  کاربر داده نمی شود',
                         'err_panel_manage_bot_set_1' => '❌ نکته :
 برای فعالسازی پنل باید به منوی مدیریت پنل  رفته و گزینه های 
-منوی تنظیم شناسه اینباند رفته و نام کانفیگ را تنظیم نمایید در غیراینصورت ربات هیچ کانفیگی نمیسازد',
+منوی تنظیم پروتکل اینباند رفته و نام کانفیگ را تنظیم نمایید در غیراینصورت ربات هیچ کانفیگی نمیسازد',
                         'err_panel_manage_bot_set_2' => '❌ نکته :
 برای فعالسازی باید از مدیریت پنل > تنظیم نام گروه یک نام پیشفرض گروه که در ibsng تعریف کردید در ربات بفرستید.',
                         'err_account_enable_must_note' => '❌ نکته :
@@ -982,8 +982,8 @@ n2',
 ➖➖➖➖➖➖➖➖➖➖➖
 🔹 | همچنین اگر نیاز به <b>راهنمایی</b> یا کمک دارید، می‌توانید از طریق دایرکت با تیم پشتیبانی در ارتباط باشید.
 
-📩 | برای ارسال گزارش، پیشنهاد یا درخواست راهنمایی، در <b></b> پیام بگذارید:
-<a href="https://t.me/Tabkhaal" rel="nofollow" target="_blank">@Tabkhaal</a>',
+📩 | برای ارسال گزارش، پیشنهاد یا درخواست راهنمایی، در <b>گروه میرزا</b> پیام بگذارید:
+<a href="https://t.me/mirzapanelgroup" rel="nofollow" target="_blank">Mirza Group</a>',
                         'ask_select_panel' => '🪚 برای استفاده از این قابلیت یکی از پنل های زیر را انتخاب نمایید',
                         'err_admin' => '❌ این بخش فقط در دسترس ادمین اصلی است',
                         'err_notfound_set_settings' => '❌  امکان مشاهده تنظیمات نود ها وجود ندارد',
@@ -1241,10 +1241,14 @@ f,n.n2',
                         'ok_success_user_10' => '✅ کاربر با موفقیت از لیست حذف گردید.',
                         'err_notfound_user_6' => '❌ کاربری در لیست وجود ندارد',
                         'btn_27' => 'لیست افراد👇',
-                        'msg_panel_admin_bot_report' => ' Version Bot: %s
- Version Mini App: 0.1.1
+                        'msg_panel_admin_bot_report' => '💎 | Version Bot: %s
+📌 | Version Mini App: 0.1.1
 
-<blockquote>🔹 https://t.me/tabkhaal |  </blockquote>
+<blockquote>🔹 | این ربات کاملاً رایگان است و توسط تیم میرزا توسعه داده شده است</blockquote>
+
+<blockquote>🔹 | هرگونه فروش یا دریافت وجه بابت این ربات تخلف محسوب می‌شود.</blockquote>
+
+<blockquote>🔹 | در صورت مشاهدهٔ فروش یا دریافت وجه، لطفاً وجه خود را پیگیری کرده و بازپس‌گیری نمایید.</blockquote>
 
 <blockquote>🐞 | اگر در عملکرد ربات با باگ یا مشکلی مواجه شدید، از طریق دکمهٔ **📬 گزارش ربات** در پنل ادمین با ما در ارتباط باشید.</blockquote>',
                         'ok_payment_gateway_name' => '
@@ -2503,7 +2507,60 @@ f,n.n2',
                 'setSuccess' => '✅  زبان با موفقیت تنظیم گردید',
         ],
         'extracted' => [
+                'admin_php' => [
+                        'panelNotFound' => '❌ پنل مورد نظر یافت نشد.',
+                        'panelErrorCode' => '❌  خطایی رخ داده است کد خطا :  %s',
+                        'selectPanelForOrder' => '📌 از لیست پایین انتخاب کنید که سفارش از کدام پنل ساخته شود',
+                        'panelSelectedSuccess' => '✅ پنل با موفقیت انتخاب شد',
+                        'serverStatus' => '🖥 <b>وضعیت سرور</b>
+
+⚙️ <b>پردازنده</b>
+├ مصرف: <code>{cpu}%</code>
+├ هسته‌ها: <code>{cpuCores}</code> (منطقی: {logicalPro})
+└ فرکانس: <code>{cpuSpeed} GHz</code>
+
+📊 <b>بار سیستم</b> (۱/۵/۱۵ دقیقه)
+└ <code>{load1} | {load5} | {load15}</code>
+
+🧠 <b>رم</b>
+└ <code>{memUsed} / {memTotal}</code> ({memPercent}%)
+
+💾 <b>دیسک</b>
+└ <code>{diskUsed} / {diskTotal}</code> ({diskPercent}%)
+
+🌐 <b>شبکه (لحظه‌ای)</b>
+├ آپلود: <code>{netUp}/s</code>
+└ دانلود: <code>{netDown}/s</code>
+
+📡 <b>ترافیک کل</b>
+├ ارسالی: <code>{netSent}</code>
+└ دریافتی: <code>{netRecv}</code>
+
+🔌 <b>اتصالات</b>
+└ TCP: <code>{tcp}</code> | UDP: <code>{udp}</code>
+
+🛡 <b>Xray</b>
+├ وضعیت: <code>{xrayState}</code>
+└ نسخه: <code>{xrayVersion}</code>
+
+🏷 <b>نسخه پنل:</b> <code>{panelVersion}</code>
+⏱ <b>آپتایم:</b> <code>{uptime}</code>
+
+🔗 <b>IP عمومی</b>
+├ IPv4: <code>{ipv4}</code>
+└ IPv6: <code>{ipv6}</code>',
+                        'xuiErrorCode' => '❌ خطایی رخ داده است کد خطا :  ',
+                        'xuiErrorReason' => '❌ خطایی رخ داده است علت خطا :  ',
+                        'xrayActive' => '🟢 فعال',
+                        'xrayStopped' => '🔴 متوقف',
+                        'ipNone' => 'ندارد',
+                        'eylanErrorCode' => '❌  خطایی رخ داده است کد خطا :  %s',
+                        'eylanUserNotExist' => '❌ یوزر در پنل وجود ندارد.',
+                        'eylanPanelOutput' => 'خروجی پنل :',
+                ],
                 'keyboard_php' => [
+                        'panelSetting' => '🎛 تنظیم پنل',
+                        'mirzaAgentPanel' => 'نمایندگی میرزا',
                         'setGroupName' => '🎛 تنظیم نام گروه',
                         'subLinkDomain' => '🔗 دامنه لینک ساب',
                         'panelTypeSanaei' => 'ثنایی تک پورت',
@@ -2512,6 +2569,10 @@ f,n.n2',
                         'currencyToman' => 'تومان',
                 ],
                 'index_php' => [
+                        'langBtnFa' => '🇮🇷 فارسی',
+                        'langBtnEn' => '🇬🇧 English',
+                        'langBtnZh' => '🇨🇳 中文',
+                        'langBtnRu' => '🇷🇺 Русский',
                         'acceptRulesButton' => '✅ قوانین را می پذیرم',
                         'affiliateBalanceGift' => '🎁 مبلغ {addbalancediscount} به موجودی شما از طرف زیر مجموعه با شناسه کاربری {from_id} اضافه گردید.',
                         'unlimited' => 'نامحدود',
@@ -3998,7 +4059,7 @@ https://t.me/%s?start=%s',
                 'layoutNavLogout' => 'مدیریت',
                 'layoutNavOrders' => 'بله، ادامه',
                 'layoutNavPayments' => '· پنل',
-                'layoutNavProducts' => 'aLI',
+                'layoutNavProducts' => 'میرزا',
                 'layoutNavServices' => 'انصراف',
                 'layoutNavSettings' => 'داشبورد',
                 'layoutNavUsers' => 'آیا اطمینان دارید؟ این عملیات قابل بازگشت نیست.',
@@ -4011,7 +4072,7 @@ https://t.me/%s?start=%s',
                 'layoutPageTitleProduct' => 'محصولات',
                 'layoutPageTitleService' => 'سرویس‌ها',
                 'layoutPageTitleSettings' => 'تنظیمات',
-                'layoutPageTitleSuffix' => 'َaLI',
+                'layoutPageTitleSuffix' => 'میرزا',
                 'layoutPageTitleUsers' => 'کاربران',
                 'layoutProfileMenuLabel' => 'تنظیمات',
                 'layoutSearchBoxPlaceholder' => 'تراکنش‌ها',
@@ -4021,11 +4082,11 @@ https://t.me/%s?start=%s',
                 'loginEnterCredentials' => 'نام کاربری و رمز عبور را وارد کنید.',
                 'loginErrorTitle' => 'رمز عبور',
                 'loginFooter' => 'نام کاربری',
-                'loginHeading' => 'پنل مدیریت ',
+                'loginHeading' => 'پنل مدیریت میرزا',
                 'loginHidePassword' => 'دسترسی به این پنل فقط برای مدیران مجاز است.',
-                'loginPanelTitle' => 'ورود — پنل مدیریت ',
+                'loginPanelTitle' => 'ورود — پنل مدیریت میرزا',
                 'loginPasswordLabel' => 'پنل مدیریت میرزا',
-                'loginPasswordPlaceholder' => '· نسخه 1.0 ',
+                'loginPasswordPlaceholder' => '· نسخه 1.0 میرزا',
                 'loginRememberMe' => 'برای مدیریت ربات، اطلاعات حساب خود را وارد کنید.',
                 'loginShowPassword' => 'ورود به پنل',
                 'loginSubtitle' => 'برای حمایت لطفا به',
